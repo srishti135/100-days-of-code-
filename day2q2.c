@@ -8,6 +8,6 @@ int main(void) {
     scanf("%f", &radius);
     area = PI * radius * radius;
     circumference = 2 * PI * radius;
-    printf("Area=%.2f, Circumference=%.2f\n", area, circumference);
+    printf("Area=%f, Circumference=%f\n", area, circumference);
     return 0;
 }
