@@ -1,23 +1,20 @@
-//problemQ86: Check if a string is a palindrome.
+//problemQ84: Convert a lowercase string to uppercase without using built-in functions.
 #include <stdio.h>
 #include <string.h>
-
-int main() {
-    char str[100];
-    int i, j;
-
-    printf("Enter a string: ");
-    fgets(str, sizeof(str), stdin);
-    str[strcspn(str, "\n")] = 0;  // Remove newline character
-
-    // Check if the string is a palindrome
-    j = strlen(str) - 1;
-    for (i = 0; i < j; i++, j--) {
-        if (str[i] != str[j]) {
-            printf("Not palindrome\n");
-            return 0;
+#include <ctype.h>
+void toUpperCase(char str[]) {
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] >= 'a' && str[i] <= 'z') {
+            str[i] = str[i] - ('a' - 'A');
         }
     }
-    printf("Palindrome\n");
+}
+int main() {
+    char str[100];  
+    printf("Enter a lowercase string: ");
+    fgets(str, sizeof(str), stdin);
+    str[strcspn(str, "\n")] = 0;  
+    toUpperCase(str);
+    printf("Uppercase string: %s\n", str);
     return 0;
 }
