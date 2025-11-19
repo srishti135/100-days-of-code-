@@ -1,2 +1,3 @@
-Name: Srishti jain
-Age: 18
+NAME: SRISHTI JAIN
+AGE: 18
+SRISHTI JAIN
