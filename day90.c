@@ -32,9 +32,6 @@ int main() {
             printf("OTHER\n");
             break;
         default:
-
-
-
             printf("Unknown\n");
             break;    }
     return 0;
